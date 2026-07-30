@@ -1,56 +1,55 @@
-<div align="center">
-  <h1>Gerenciador de Tarefas Caóticas (GTC) 📝</h1>
-  <p><b>Para pessoas que só funcionam à base do desespero</b></p>
-  
-  <img src="https://img.shields.io/badge/status-procrastinando-yellow?style=for-the-badge" alt="Status" />
-  <img src="https://img.shields.io/badge/depend%C3%AAncia-Texto_Magico_Pro-blue?style=for-the-badge" alt="Dependência" />
-  
-  <br><br>
-</div>
+# Gerenciador de Tarefas - CLI 📝
 
-Um mini aplicativo de terminal projetado especificamente para desenvolvedores que só conseguem ser produtivos sob extrema pressão psicológica. Este projeto consome a brilhante biblioteca `Texto Magico Pro` como dependência obrigatória via submódulos do Git.
+Um aplicativo de linha de comando (CLI) desenvolvido em Python para o registro, priorização e ofuscação de tarefas. Este projeto foi criado como requisito prático de desenvolvimento, demonstrando a integração e o consumo de dependências externas através da arquitetura de submódulos do Git.
 
-## 🚀 Tecnologias Integradas
+## 🚀 Funcionalidades
 
-O aplicativo delega todo o trabalho pesado para a arquitetura assustadoramente simples do submódulo, entregando:
+O sistema consome a biblioteca `Texto Magico Pro` como submódulo para realizar o processamento das strings fornecidas pelo usuário:
 
-*   **Uppercase Protocol (Grito Motivacional):** Transforma tarefas simples e fáceis de ignorar em ordens ameaçadoras, garantindo o fim imediato da sua paz de espírito.
-*   **Reverse String Technology (Criptografia de Tela):** Um sofisticado sistema de segurança visual de ponta a ponta. Impede que pessoas passando atrás da sua cadeira saibam o que você está (ou não) fazendo.
+*   **Sistema de Alerta de Prioridade:** Utiliza o processamento de texto em caixa alta (*Uppercase Protocol*) nativo da biblioteca para destacar tarefas críticas, gerando alertas visuais no terminal.
+*   **Ofuscação de Dados:** Implementa a reversão de caracteres (*Reverse String Technology*) para criar uma camada de ofuscação de dados, ocultando o conteúdo original da tarefa na interface para fins de privacidade.
 
-## ⚙️ Como executar o sistema
+## ⚙️ Pré-requisitos
 
-O processo de instalação requer um mínimo de esforço (sabemos que é difícil, mas você consegue):
+*   Python 3.x
+*   Git 
 
-**1. Clone este repositório** garantindo a inicialização dos submódulos. 
-*(Aviso: se esquecer o `--recurse-submodules`, o sistema vai quebrar e você terá uma excelente desculpa para continuar procrastinando).*
+## 🔧 Instalação e Execução
+
+**1. Clonagem do repositório** 
+
+Para garantir que a biblioteca dependente seja baixada corretamente, é obrigatório clonar o repositório utilizando a flag de recursividade para os submódulos:
+
 ```bash
 git clone --recurse-submodules <LINK_DESTE_REPOSITORIO>
 ```
 
-**2. Acesse a pasta do projeto:**
+*(Nota: Caso o repositório já tenha sido clonado sem a flag, execute `git submodule update --init` na raiz do projeto).*
+
+**2. Acesso ao diretório**
+
 ```bash
 cd app-tarefas-caoticas
 ```
 
-**3. Execute o script principal:**
+**3. Execução do sistema**
+
 ```bash
 python main.py
 ```
 
-## 📖 Exemplo de Uso na Vida Real
-
-Ao iniciar o sistema, você será duramente confrontado com a realidade das suas pendências:
+## 📖 Exemplo de Uso
 
 ```text
 ==================================================
-   Gerenciador de Tarefas Caóticas (GTC)          
+   Gerenciador de Tarefas - CLI          
 ==================================================
-Digite a tarefa que você está procrastinando: estudar devops
+Informe a tarefa pendente: Atualizar documentação da API
 
-Calculando o nível de desespero...
+Processando entrada...
 
-[URGÊNCIA MÁXIMA] PARE DE ENROLAR E VÁ FAZER AGORA: ESTUDAR DEVOPS!!!
-[MODO PRIVACIDADE] Tarefa criptografada com sucesso: spoved radutse
+[PRIORIDADE ALTA] ATUALIZAR DOCUMENTAÇÃO DA API!!!
+[DADO OFUSCADO] IPA ad oãçatnemucod razilautA
 
-Boa sorte. Você vai precisar!
+Operação concluída com sucesso.
 ```
